@@ -10,9 +10,8 @@
   <!-- Navbar -->
   <nav>
     <div class="logo">FAL Café</div>
-    <!-- Hamburger Menu -->
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul id="nav-links">
+    <div class="menu-toggle">☰</div>
+    <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#profile">Our Profile</a></li>
       <li><a href="#menu">Menu</a></li>
@@ -23,11 +22,14 @@
   <!-- Banner -->
   <header id="home" class="banner">
     <div class="banner-content">
-      <h1>Selamat Datang di FAL Café <span id="username">User</span></h1>
+      <h1>Selamat Datang di FAL Café <span id="username">user</span></h1>
       <p>Kopi terbaik, suasana nyaman, untuk semua momenmu ☕</p>
       <button class="btn-primary">Explore Menu</button>
     </div>
   </header>
+
+  <!-- Diagonal Transition -->
+  <div class="diagonal"></div>
 
   <!-- Our Profile -->
   <section id="profile">
@@ -71,6 +73,7 @@
         <h3>Cheesecake</h3>
         <p>Manis dan lembut, pasangan sempurna untuk secangkir kopi.</p>
       </div>
+      <!-- Menu Tambahan -->
       <div class="menu-item">
         <div class="menu-img">🍮</div>
         <h3>Caramel Macchiato</h3>
@@ -83,31 +86,31 @@
   <section id="contact">
     <h2>Message Us</h2>
     <div class="form-container">
-      <form id="messageForm">
+      <form>
         <label>Nama:</label>
-        <input type="text" id="name" required>
+        <input type="text" required>
 
         <label>Tanggal Lahir:</label>
-        <input type="date" id="birthdate" required>
+        <input type="date" required>
 
         <label>Jenis Kelamin:</label>
-        <select id="gender">
+        <select>
           <option>Laki-laki</option>
           <option>Perempuan</option>
         </select>
 
         <label>Pesan:</label>
-        <textarea id="message" rows="4"></textarea>
+        <textarea rows="4"></textarea>
 
         <button type="submit">Kirim</button>
       </form>
 
       <div id="formResult">
         <h3>Data Input</h3>
-        <p id="resultName">Nama: -</p>
-        <p id="resultDate">Tanggal: -</p>
-        <p id="resultGender">Jenis Kelamin: -</p>
-        <p id="resultMessage">Pesan: -</p>
+        <p>Nama: -</p>
+        <p>Tanggal: -</p>
+        <p>Jenis Kelamin: -</p>
+        <p>Pesan: -</p>
       </div>
     </div>
   </section>
