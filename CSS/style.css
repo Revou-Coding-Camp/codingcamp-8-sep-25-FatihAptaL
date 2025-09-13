@@ -1,3 +1,4 @@
+/*Global Styles*/
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -23,6 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: relative;
 }
 
 nav .logo {
@@ -50,6 +52,13 @@ nav ul li a {
 nav ul li a:hover {
   color: #f5ebe0;
   text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 /*Banner*/
@@ -224,8 +233,27 @@ footer {
 /*Responsive*/
 @media (max-width: 768px) {
   nav ul {
+    display: none; /* sembunyikan menu */
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: #6b4f4f;
     flex-direction: column;
-    gap: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  nav ul.show {
+    display: flex; /* tampilkan menu saat toggle aktif */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block; /* tampilkan icon garis tiga */
   }
 
   .banner h1 {
