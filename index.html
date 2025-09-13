@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAL Café</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">FAL Café</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profile">Our Profile</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Message Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner -->
+  <header id="home" class="banner">
+    <div class="banner-content">
+      <h1>Selamat Datang di FAL Café <span id="username">user</span></h1>
+      <p>Kopi terbaik, suasana nyaman, untuk semua momenmu ☕</p>
+      <button class="btn-primary">Explore Menu</button>
+    </div>
+  </header>
+
+  <!-- Diagonal Transition -->
+  <div class="diagonal"></div>
+
+  <!-- Our Profile -->
+  <section id="profile">
+    <h2>About Us</h2>
+    <p>
+      FAL Café lahir dari kecintaan pada kopi dan momen kebersamaan.
+      Kami menghadirkan minuman kopi premium, minuman non-kopi, dan pastry
+      hangat dengan suasana yang membuat setiap kunjungan terasa istimewa.
+    </p>
+
+    <h2>Vision</h2>
+    <p>
+      Menjadi café pilihan utama pecinta kopi di Indonesia dengan rasa dan
+      pelayanan terbaik.
+    </p>
+
+    <h2>Mission</h2>
+    <ul>
+      <li>Menyajikan kopi dari biji pilihan lokal dan internasional.</li>
+      <li>Memberikan pengalaman café yang hangat dan ramah.</li>
+      <li>Mendukung petani kopi lokal untuk keberlanjutan.</li>
+    </ul>
+  </section>
+
+  <!-- Menu Section -->
+<section id="menu">
+  <h2>Our Signature Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="menu-img">☕</div>
+      <h3>Espresso</h3>
+      <p>Kopi pekat dengan cita rasa khas, pilihan favorit pecinta kopi sejati.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-img">🥛</div>
+      <h3>Café Latte</h3>
+      <p>Kombinasi espresso dan susu segar, lembut dan creamy.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-img">🍰</div>
+      <h3>Cheesecake</h3>
+      <p>Manis dan lembut, pasangan sempurna untuk secangkir kopi.</p>
+    </div>
+    <!-- Menu Tambahan -->
+    <div class="menu-item">
+      <div class="menu-img">🍮</div>
+      <h3>Caramel Macchiato</h3>
+      <p>Espresso dengan sentuhan karamel manis dan susu lembut.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Message Us</h2>
+    <div class="form-container">
+      <form>
+        <label>Nama:</label>
+        <input type="text" required>
+
+        <label>Tanggal Lahir:</label>
+        <input type="date" required>
+
+        <label>Jenis Kelamin:</label>
+        <select>
+          <option>Laki-laki</option>
+          <option>Perempuan</option>
+        </select>
+
+        <label>Pesan:</label>
+        <textarea rows="4"></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+
+      <div id="formResult">
+        <h3>Data Input</h3>
+        <p>Nama: -</p>
+        <p>Tanggal: -</p>
+        <p>Jenis Kelamin: -</p>
+        <p>Pesan: -</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created with ❤ by FAL Café © 2025</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
