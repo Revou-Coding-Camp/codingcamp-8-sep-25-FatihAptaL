@@ -1,50 +1,36 @@
-// Ganti nama user di banner
-window.onload = function () {
-  let nama = prompt("Selamat datang di FAL Café! Siapa nama Anda?");
-  if (nama) {
-    document.getElementById("username").textContent = nama;
-  } else {
-    document.getElementById("username").textContent = "Pengunjung";
-  }
-};
+// ===== Prompt untuk Nama User =====
+const userName = prompt("Selamat datang di FAL Café! Siapa nama Anda?");
+const usernameSpan = document.getElementById("username");
+if (userName && usernameSpan) {
+  usernameSpan.textContent = userName;
+}
 
-// Ambil data dari form
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("messageForm");
-  const resultNama = document.getElementById("resultNama");
-  const resultTanggal = document.getElementById("resultTanggal");
-  const resultGender = document.getElementById("resultGender");
-  const resultPesan = document.getElementById("resultPesan");
-  const successMsg = document.getElementById("successMsg");
+// ===== Navbar Toggle untuk Mobile =====
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
 
-    const nama = document.getElementById("nama").value;
-    const tanggal = document.getElementById("tanggal").value;
-    const gender = document.getElementById("gender").value;
-    const pesan = document.getElementById("pesan").value;
+// ===== Form Handling =====
+const form = document.getElementById("messageForm");
 
-    resultNama.textContent = "Nama: " + nama;
-    resultTanggal.textContent = "Tanggal: " + tanggal;
-    resultGender.textContent = "Jenis Kelamin: " + gender;
-    resultPesan.textContent = "Pesan: " + pesan;
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    [resultNama, resultTanggal, resultGender, resultPesan].forEach(el => {
-      el.classList.remove("fade-in");
-      void el.offsetWidth;
-      el.classList.add("fade-in");
-    });
+  // Ambil nilai input
+  const name = document.getElementById("name").value;
+  const birthdate = document.getElementById("birthdate").value;
+  const gender = document.getElementById("gender").value;
+  const message = document.getElementById("message").value;
 
-    // tampilkan alert sukses
-    successMsg.classList.remove("hidden");
-    successMsg.classList.add("show");
+  // Tampilkan hasil ke #formResult
+  document.getElementById("resultName").textContent = "Nama: " + name;
+  document.getElementById("resultDate").textContent = "Tanggal: " + birthdate;
+  document.getElementById("resultGender").textContent = "Jenis Kelamin: " + gender;
+  document.getElementById("resultMessage").textContent = "Pesan: " + message;
 
-    setTimeout(() => {
-      successMsg.classList.remove("show");
-      setTimeout(() => successMsg.classList.add("hidden"), 600);
-    }, 3000);
-
-    form.reset();
-  });
+  // Reset form setelah submit
+  form.reset();
 });
