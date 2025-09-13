@@ -1,36 +1,36 @@
-// ===== Prompt untuk Nama User =====
-const userName = prompt("Selamat datang di FAL Café! Siapa nama Anda?");
-const usernameSpan = document.getElementById("username");
-if (userName && usernameSpan) {
-  usernameSpan.textContent = userName;
-}
+// Prompt untuk nama user
+document.addEventListener("DOMContentLoaded", function () {
+  let username = prompt("Selamat datang di FAL Café! Siapa nama Anda?");
+  if (username) {
+    document.getElementById("username").textContent = username;
+  }
 
-// ===== Navbar Toggle untuk Mobile =====
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+  // Hamburger menu toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
 
-// ===== Form Handling =====
-const form = document.getElementById("messageForm");
+  // Form handling
+  const form = document.querySelector("form");
+  const result = document.getElementById("formResult");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  // Ambil nilai input
-  const name = document.getElementById("name").value;
-  const birthdate = document.getElementById("birthdate").value;
-  const gender = document.getElementById("gender").value;
-  const message = document.getElementById("message").value;
+    const nama = form.querySelector("input[type='text']").value;
+    const tanggal = form.querySelector("input[type='date']").value;
+    const gender = form.querySelector("select").value;
+    const pesan = form.querySelector("textarea").value;
 
-  // Tampilkan hasil ke #formResult
-  document.getElementById("resultName").textContent = "Nama: " + name;
-  document.getElementById("resultDate").textContent = "Tanggal: " + birthdate;
-  document.getElementById("resultGender").textContent = "Jenis Kelamin: " + gender;
-  document.getElementById("resultMessage").textContent = "Pesan: " + message;
-
-  // Reset form setelah submit
-  form.reset();
+    result.innerHTML = `
+      <h3>Data Input</h3>
+      <p>Nama: ${nama}</p>
+      <p>Tanggal: ${tanggal}</p>
+      <p>Jenis Kelamin: ${gender}</p>
+      <p>Pesan: ${pesan}</p>
+    `;
+  });
 });
