@@ -82,38 +82,39 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Message Us</h2>
-    <div class="form-container">
-      <form>
-        <label>Nama:</label>
-        <input type="text" required>
+<!-- Contact -->
+<section id="contact">
+  <h2>Message Us</h2>
+  <div class="form-container">
+    <form id="messageForm">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" required>
 
-        <label>Tanggal Lahir:</label>
-        <input type="date" required>
+      <label for="birthdate">Tanggal Lahir:</label>
+      <input type="date" id="birthdate" required>
 
-        <label>Jenis Kelamin:</label>
-        <select>
-          <option>Laki-laki</option>
-          <option>Perempuan</option>
-        </select>
+      <label for="gender">Jenis Kelamin:</label>
+      <select id="gender">
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
 
-        <label>Pesan:</label>
-        <textarea rows="4"></textarea>
+      <label for="message">Pesan:</label>
+      <textarea id="message" rows="4"></textarea>
 
-        <button type="submit">Kirim</button>
-      </form>
+      <button type="submit">Kirim</button>
+    </form>
 
-      <div id="formResult">
-        <h3>Data Input</h3>
-        <p>Nama: -</p>
-        <p>Tanggal: -</p>
-        <p>Jenis Kelamin: -</p>
-        <p>Pesan: -</p>
-      </div>
+    <div id="formResult">
+      <h3>Data Input</h3>
+      <p id="resultName">Nama: -</p>
+      <p id="resultDate">Tanggal: -</p>
+      <p id="resultGender">Jenis Kelamin: -</p>
+      <p id="resultMessage">Pesan: -</p>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
@@ -123,3 +124,4 @@
   <script src="Js/script.js"></script>
 </body>
 </html>
+
