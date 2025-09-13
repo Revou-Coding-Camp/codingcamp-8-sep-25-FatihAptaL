@@ -34,3 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   });
 });
+
+//Form Message Us
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("messageForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Ambil nilai input
+    const name = document.getElementById("name").value;
+    const birthdate = document.getElementById("birthdate").value;
+    const gender = document.getElementById("gender").value;
+    const message = document.getElementById("message").value;
+
+    // Update hasil
+    document.getElementById("resultName").textContent = "Nama: " + name;
+    document.getElementById("resultDate").textContent = "Tanggal: " + birthdate;
+    document.getElementById("resultGender").textContent = "Jenis Kelamin: " + gender;
+    document.getElementById("resultMessage").textContent = "Pesan: " + message;
+    form.reset();
+  });
+});
